@@ -1,0 +1,4 @@
+id_ouvidoria,descricao_ouvidoria,cod_tipo,cod_servico,protocolo_ouvidoria,data_ouvidoria,cod_usuario
+1,"Falta de medicamentos no posto.",4,2,202605010001,2026-05-01 08:30:00,1
+2,"Ótimo atendimento dos professores.",2,1,202605010002,2026-05-01 09:45:00,2
+3,"Solicito o reparo de buracos no asfalto.",3,7,202605010003,2026-05-01 14:20:00,3
