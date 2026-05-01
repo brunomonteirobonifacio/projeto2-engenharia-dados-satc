@@ -27,6 +27,23 @@ services:
     command: server /data --console-address ":9001"
     restart: unless-stopped
 
+  spark-lab:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: spark-lab
+    ports:
+      - "8888:8888" # Jupyter Lab
+      - "4040:4040" # Spark UI
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    environment:
+      - SPARK_HOME=/usr/local/lib/python3.11/site-packages/pyspark
+      - PYTHONPATH=/app
+    stdin_open: true
+    tty: true
+
 volumes:
   sqlserver-data:
   minio-data:
