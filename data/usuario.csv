@@ -1,0 +1,4 @@
+id_usuario,nome_usuario,cpf_usuario,email_usuario,senha_usuario,telefone_usuario,whatsapp_usuario,data_nasc,cod_cidade,data_ultimo_acesso,hash_ativacao_usuario
+1,João Silva,111.111.111-11,joao@email.com,senha123,(11) 99999-1111,(11) 99999-1111,1990-05-15,1,2026-05-01 10:00:00,abc123hash
+2,Maria Souza,222.222.222-22,maria@email.com,senha456,(21) 98888-2222,(21) 98888-2222,1985-08-22,2,2026-05-01 11:30:00,def456hash
+3,Carlos Lima,333.333.333-33,carlos@email.com,senha789,(31) 97777-3333,(31) 97777-3333,1995-12-10,3,2026-05-01 09:15:00,ghi789hash

@@ -1,0 +1,501 @@
+id_cidade,nome_cidade,cod_estado
+1,Afonso Cláudio,8
+2,Água Doce do Norte,8
+3,Águia Branca,8
+4,Alegre,8
+5,Alfredo Chaves,8
+6,Alto Rio Novo,8
+7,Anchieta,8
+8,Apiacá,8
+9,Aracruz,8
+10,Atilio Vivacqua,8
+11,Baixo Guandu,8
+12,Barra de São Francisco,8
+13,Boa Esperança,8
+14,Bom Jesus do Norte,8
+15,Brejetuba,8
+16,Cachoeiro de Itapemirim,8
+17,Cariacica,8
+18,Castelo,8
+19,Colatina,8
+20,Conceição da Barra,8
+21,Conceição do Castelo,8
+22,Divino de São Lourenço,8
+23,Domingos Martins,8
+24,Dores do Rio Preto,8
+25,Ecoporanga,8
+26,Fundão,8
+27,Governador Lindenberg,8
+28,Guaçuí,8
+29,Guarapari,8
+30,Ibatiba,8
+31,Ibiraçu,8
+32,Ibitirama,8
+33,Iconha,8
+34,Irupi,8
+35,Itaguaçu,8
+36,Itapemirim,8
+37,Itarana,8
+38,Iúna,8
+39,Jaguaré,8
+40,Jerônimo Monteiro,8
+41,João Neiva,8
+42,Laranja da Terra,8
+43,Linhares,8
+44,Mantenópolis,8
+45,Marataízes,8
+46,Marechal Floriano,8
+47,Marilândia,8
+48,Mimoso do Sul,8
+49,Montanha,8
+50,Mucurici,8
+51,Muniz Freire,8
+52,Muqui,8
+53,Nova Venécia,8
+54,Pancas,8
+55,Pedro Canário,8
+56,Pinheiros,8
+57,Piúma,8
+58,Ponto Belo,8
+59,Presidente Kennedy,8
+60,Rio Bananal,8
+61,Rio Novo do Sul,8
+62,Santa Leopoldina,8
+63,Santa Maria de Jetibá,8
+64,Santa Teresa,8
+65,São Domingos do Norte,8
+66,São Gabriel da Palha,8
+67,São José do Calçado,8
+68,São Mateus,8
+69,São Roque do Canaã,8
+70,Serra,8
+71,Sooretama,8
+72,Vargem Alta,8
+73,Venda Nova do Imigrante,8
+74,Viana,8
+75,Vila Pavão,8
+76,Vila Valério,8
+77,Vila Velha,8
+78,Vitória,8
+79,Acrelândia,1
+80,Assis Brasil,1
+81,Brasiléia,1
+82,Bujari,1
+83,Capixaba,1
+84,Cruzeiro do Sul,1
+85,Epitaciolândia,1
+86,Feijó,1
+87,Jordão,1
+88,Mâncio Lima,1
+89,Manoel Urbano,1
+90,Marechal Thaumaturgo,1
+91,Plácido de Castro,1
+92,Porto Acre,1
+93,Porto Walter,1
+94,Rio Branco,1
+95,Rodrigues Alves,1
+96,Santa Rosa do Purus,1
+97,Sena Madureira,1
+98,Senador Guiomard,1
+99,Tarauacá,1
+100,Xapuri,1
+101,Água Branca,2
+102,Anadia,2
+103,Arapiraca,2
+104,Atalaia,2
+105,Barra de Santo Antônio,2
+106,Barra de São Miguel,2
+107,Batalha,2
+108,Belém,2
+109,Belo Monte,2
+110,Boca da Mata,2
+111,Branquinha,2
+112,Cacimbinhas,2
+113,Cajueiro,2
+114,Campestre,2
+115,Campo Alegre,2
+116,Campo Grande,2
+117,Canapi,2
+118,Capela,2
+119,Carneiros,2
+120,Chã Preta,2
+121,Coité do Nóia,2
+122,Colônia Leopoldina,2
+123,Coqueiro Seco,2
+124,Coruripe,2
+125,Craíbas,2
+126,Delmiro Gouveia,2
+127,Dois Riachos,2
+128,Estrela de Alagoas,2
+129,Feira Grande,2
+130,Feliz Deserto,2
+131,Flexeiras,2
+132,Girau do Ponciano,2
+133,Ibateguara,2
+134,Igaci,2
+135,Igreja Nova,2
+136,Inhapi,2
+137,Jacaré dos Homens,2
+138,Jacuípe,2
+139,Japaratinga,2
+140,Jaramataia,2
+141,Jequiá da Praia,2
+142,Joaquim Gomes,2
+143,Jundiá,2
+144,Junqueiro,2
+145,Lagoa da Canoa,2
+146,Limoeiro de Anadia,2
+147,Maceió,2
+148,Major Isidoro,2
+149,Mar Vermelho,2
+150,Maragogi,2
+151,Maravilha,2
+152,Marechal Deodoro,2
+153,Maribondo,2
+154,Mata Grande,2
+155,Matriz de Camaragibe,2
+156,Messias,2
+157,Minador do Negrão,2
+158,Monteirópolis,2
+159,Murici,2
+160,Novo Lino,2
+161,Olho d`Água das Flores,2
+162,Olho d`Água do Casado,2
+163,Olho d`Água Grande,2
+164,Olivença,2
+165,Ouro Branco,2
+166,Palestina,2
+167,Palmeira dos Índios,2
+168,Pão de Açúcar,2
+169,Pariconha,2
+170,Paripueira,2
+171,Passo de Camaragibe,2
+172,Paulo Jacinto,2
+173,Penedo,2
+174,Piaçabuçu,2
+175,Pilar,2
+176,Pindoba,2
+177,Piranhas,2
+178,Poço das Trincheiras,2
+179,Porto Calvo,2
+180,Porto de Pedras,2
+181,Porto Real do Colégio,2
+182,Quebrangulo,2
+183,Rio Largo,2
+184,Roteiro,2
+185,Santa Luzia do Norte,2
+186,Santana do Ipanema,2
+187,Santana do Mundaú,2
+188,São Brás,2
+189,São José da Laje,2
+190,São José da Tapera,2
+191,São Luís do Quitunde,2
+192,São Miguel dos Campos,2
+193,São Miguel dos Milagres,2
+194,São Sebastião,2
+195,Satuba,2
+196,Senador Rui Palmeira,2
+197,Tanque d`Arca,2
+198,Taquarana,2
+199,Teotônio Vilela,2
+200,Traipu,2
+201,União dos Palmares,2
+202,Viçosa,2
+203,Amapá,4
+204,Calçoene,4
+205,Cutias,4
+206,Ferreira Gomes,4
+207,Itaubal,4
+208,Laranjal do Jari,4
+209,Macapá,4
+210,Mazagão,4
+211,Oiapoque,4
+212,Pedra Branca do Amaparí,4
+213,Porto Grande,4
+214,Pracuúba,4
+215,Santana,4
+216,Serra do Navio,4
+217,Tartarugalzinho,4
+218,Vitória do Jari,4
+219,Alvarães,3
+220,Amaturá,3
+221,Anamã,3
+222,Anori,3
+223,Apuí,3
+224,Atalaia do Norte,3
+225,Autazes,3
+226,Barcelos,3
+227,Barreirinha,3
+228,Benjamin Constant,3
+229,Beruri,3
+230,Boa Vista do Ramos,3
+231,Boca do Acre,3
+232,Borba,3
+233,Caapiranga,3
+234,Canutama,3
+235,Carauari,3
+236,Careiro,3
+237,Careiro da Várzea,3
+238,Coari,3
+239,Codajás,3
+240,Eirunepé,3
+241,Envira,3
+242,Fonte Boa,3
+243,Guajará,3
+244,Humaitá,3
+245,Ipixuna,3
+246,Iranduba,3
+247,Itacoatiara,3
+248,Itamarati,3
+249,Itapiranga,3
+250,Japurá,3
+251,Juruá,3
+252,Jutaí,3
+253,Lábrea,3
+254,Manacapuru,3
+255,Manaquiri,3
+256,Manaus,3
+257,Manicoré,3
+258,Maraã,3
+259,Maués,3
+260,Nhamundá,3
+261,Nova Olinda do Norte,3
+262,Novo Airão,3
+263,Novo Aripuanã,3
+264,Parintins,3
+265,Pauini,3
+266,Presidente Figueiredo,3
+267,Rio Preto da Eva,3
+268,Santa Isabel do Rio Negro,3
+269,Santo Antônio do Içá,3
+270,São Gabriel da Cachoeira,3
+271,São Paulo de Olivença,3
+272,São Sebastião do Uatumã,3
+273,Silves,3
+274,Tabatinga,3
+275,Tapauá,3
+276,Tefé,3
+277,Tonantins,3
+278,Uarini,3
+279,Urucará,3
+280,Urucurituba,3
+281,Abaíra,5
+282,Abaré,5
+283,Acajutiba,5
+284,Adustina,5
+285,Água Fria,5
+286,Aiquara,5
+287,Alagoinhas,5
+288,Alcobaça,5
+289,Almadina,5
+290,Amargosa,5
+291,Amélia Rodrigues,5
+292,América Dourada,5
+293,Anagé,5
+294,Andaraí,5
+295,Andorinha,5
+296,Angical,5
+297,Anguera,5
+298,Antas,5
+299,Antônio Cardoso,5
+300,Antônio Gonçalves,5
+301,Aporá,5
+302,Apuarema,5
+303,Araças,5
+304,Aracatu,5
+305,Araci,5
+306,Aramari,5
+307,Arataca,5
+308,Aratuípe,5
+309,Aurelino Leal,5
+310,Baianópolis,5
+311,Baixa Grande,5
+312,Banzaê,5
+313,Barra,5
+314,Barra da Estiva,5
+315,Barra do Choça,5
+316,Barra do Mendes,5
+317,Barra do Rocha,5
+318,Barreiras,5
+319,Barro Alto,5
+320,Barro Preto (antigo Gov. Lomanto Jr.),5
+321,Barrocas,5
+322,Belmonte,5
+323,Belo Campo,5
+324,Biritinga,5
+325,Boa Nova,5
+326,Boa Vista do Tupim,5
+327,Bom Jesus da Lapa,5
+328,Bom Jesus da Serra,5
+329,Boninal,5
+330,Bonito,5
+331,Boquira,5
+332,Botuporã,5
+333,Brejões,5
+334,Brejolândia,5
+335,Brotas de Macaúbas,5
+336,Brumado,5
+337,Buerarema,5
+338,Buritirama,5
+339,Caatiba,5
+340,Cabaceiras do Paraguaçu,5
+341,Cachoeira,5
+342,Caculé,5
+343,Caém,5
+344,Caetanos,5
+345,Caetité,5
+346,Cafarnaum,5
+347,Cairu,5
+348,Caldeirão Grande,5
+349,Camacan,5
+350,Camaçari,5
+351,Camamu,5
+352,Campo Alegre de Lourdes,5
+353,Campo Formoso,5
+354,Canápolis,5
+355,Canarana,5
+356,Canavieiras,5
+357,Candeal,5
+358,Candeias,5
+359,Candiba,5
+360,Cândido Sales,5
+361,Cansanção,5
+362,Canudos,5
+363,Capela do Alto Alegre,5
+364,Capim Grosso,5
+365,Caraíbas,5
+366,Caravelas,5
+367,Cardeal da Silva,5
+368,Carinhanha,5
+369,Casa Nova,5
+370,Castro Alves,5
+371,Catolândia,5
+372,Catu,5
+373,Caturama,5
+374,Central,5
+375,Chorrochó,5
+376,Cícero Dantas,5
+377,Cipó,5
+378,Coaraci,5
+379,Cocos,5
+380,Conceição da Feira,5
+381,Conceição do Almeida,5
+382,Conceição do Coité,5
+383,Conceição do Jacuípe,5
+384,Conde,5
+385,Condeúba,5
+386,Contendas do Sincorá,5
+387,Coração de Maria,5
+388,Cordeiros,5
+389,Coribe,5
+390,Coronel João Sá,5
+391,Correntina,5
+392,Cotegipe,5
+393,Cravolândia,5
+394,Crisópolis,5
+395,Cristópolis,5
+396,Cruz das Almas,5
+397,Curaçá,5
+398,Dário Meira,5
+399,Dias d`Ávila,5
+400,Dom Basílio,5
+401,Dom Macedo Costa,5
+402,Elísio Medrado,5
+403,Encruzilhada,5
+404,Entre Rios,5
+405,Érico Cardoso,5
+406,Esplanada,5
+407,Euclides da Cunha,5
+408,Eunápolis,5
+409,Fátima,5
+410,Feira da Mata,5
+411,Feira de Santana,5
+412,Filadélfia,5
+413,Firmino Alves,5
+414,Floresta Azul,5
+415,Formosa do Rio Preto,5
+416,Gandu,5
+417,Gavião,5
+418,Gentio do Ouro,5
+419,Glória,5
+420,Gongogi,5
+421,Governador Mangabeira,5
+422,Guajeru,5
+423,Guanambi,5
+424,Guaratinga,5
+425,Heliópolis,5
+426,Iaçu,5
+427,Ibiassucê,5
+428,Ibicaraí,5
+429,Ibicoara,5
+430,Ibicuí,5
+431,Ibipeba,5
+432,Ibipitanga,5
+433,Ibiquera,5
+434,Ibirapitanga,5
+435,Ibirapuã,5
+436,Ibirataia,5
+437,Ibitiara,5
+438,Ibititá,5
+439,Ibotirama,5
+440,Ichu,5
+441,Igaporã,5
+442,Igrapiúna,5
+443,Iguaí,5
+444,Ilhéus,5
+445,Inhambupe,5
+446,Ipecaetá,5
+447,Ipiaú,5
+448,Ipirá,5
+449,Ipupiara,5
+450,Irajuba,5
+451,Iramaia,5
+452,Iraquara,5
+453,Irará,5
+454,Irecê,5
+455,Itabela,5
+456,Itaberaba,5
+457,Itabuna,5
+458,Itacaré,5
+459,Itaeté,5
+460,Itagi,5
+461,Itagibá,5
+462,Itagimirim,5
+463,Itaguaçu da Bahia,5
+464,Itaju do Colônia,5
+465,Itajuípe,5
+466,Itamaraju,5
+467,Itamari,5
+468,Itambé,5
+469,Itanagra,5
+470,Itanhém,5
+471,Itaparica,5
+472,Itapé,5
+473,Itapebi,5
+474,Itapetinga,5
+475,Itapicuru,5
+476,Itapitanga,5
+477,Itaquara,5
+478,Itarantim,5
+479,Itatim,5
+480,Itiruçu,5
+481,Itiúba,5
+482,Itororó,5
+483,Ituaçu,5
+484,Ituberá,5
+485,Iuiú,5
+486,Jaborandi,5
+487,Jacaraci,5
+488,Jacobina,5
+489,Jaguaquara,5
+490,Jaguarari,5
+491,Jaguaripe,5
+492,Jandaíra,5
+493,Jequié,5
+494,Jeremoabo,5
+495,Jiquiriçá,5
+496,Jitaúna,5
+497,João Dourado,5
+498,Juazeiro,5
+499,Jucuruçu,5
+500,Jussara,5

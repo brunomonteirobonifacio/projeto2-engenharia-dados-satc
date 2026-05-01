@@ -1,28 +1,28 @@
-cd_estado,cd_regiao,nm_estado,sigla_uf
-11,1,RONDONIA,RO
-12,1,ACRE,AC
-13,1,AMAZONAS,AM
-14,1,RORAIMA,RR
-15,1,PARA,PA
-16,1,AMAPA,AP
-17,1,TOCANTINS,TO
-21,2,MARANHAO,MA
-22,2,PIAUI,PI
-23,2,CEARA,CE
-24,2,RIO GRANDE DO NORTE,RN
-25,2,PARAIBA,PB
-26,2,PERNAMBUCO,PE
-27,2,ALAGOAS,AL
-28,2,SERGIPE,SE
-29,2,BAHIA,BA
-31,3,MINAS GERAIS,MG
-32,3,ESPIRITO SANTO,ES
-33,3,RIO DE JANEIRO,RJ
-35,3,SAO PAULO,SP
-41,4,PARANA,PR
-42,4,SANTA CATARINA,SC
-43,4,RIO GRANDE DO SUL,RS
-50,5,MATO GROSSO DO SUL,MS
-51,5,MATO GROSSO,MT
-52,5,GOIAS,GO
-53,5,DISTRITO FEDERAL,DF
+id_estado,nome_estado,sigla_estado
+1,Acre,AC
+2,Alagoas,AL
+3,Amapá,AP
+4,Amazonas,AM
+5,Bahia,BA
+6,Ceará,CE
+7,Distrito Federal,DF
+8,Espírito Santo,ES
+9,Goiás,GO
+10,Maranhão,MA
+11,Mato Grosso,MT
+12,Mato Grosso do Sul,MS
+13,Minas Gerais,MG
+14,Pará,PA
+15,Paraíba,PB
+16,Paraná,PR
+17,Pernambuco,PE
+18,Piauí,PI
+19,Rio de Janeiro,RJ
+20,Rio Grande do Norte,RN
+21,Rio Grande do Sul,RS
+22,Rondônia,RO
+23,Roraima,RR
+24,Santa Catarina,SC
+25,São Paulo,SP
+26,Sergipe,SE
+27,Tocantins,TO
