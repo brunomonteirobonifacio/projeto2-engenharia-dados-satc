@@ -1,72 +1,36 @@
-site_name: Projeto Engenharia de Dados - Bruno M, Gianluca A e Luis Filipe D
-site_description: Pipeline com Apache Spark, Delta Lake e Apache Iceberg
-site_author: Bruno Monteiro, Gianluca Andrade e Luis FIlipe Damiani
-site_url: https://github.com
+site_name: Pipeline de Dados - Ouvidoria (SATC)
+site_description: Documentação do projeto de Engenharia de Dados com Spark, Delta Lake e PostgreSQL.
+site_author: Bruno M, Gianluca A e Luis Filipe D
+site_url: https://github.com/brunomonteirobonifacio/projeto2-engenharia-dados-satc
 
-repo_name: Projeto Engenharia de Dados
-repo_url: https://github.com/brunomonteirobonifacio/projeto-engenharia-dados-satc.git
-edit_uri: edit/main/docs/ # Confirme se a sua branch do github é main ou master
-
-docs_dir: docs
-
-# Aqui resolvemos o problema das páginas! 
-# O trabalho pede: 1 pág Contexto (index), 1 Spark, 1 Iceberg, 1 Delta
-nav:
-  - Contexto do Trabalho: index.md
-  - Apache Spark: spark.md
-  - Delta Lake: delta.md
-  - Apache Iceberg: iceberg.md
+repo_name: projeto2-engenharia-dados-satc
+repo_url: https://github.com/brunomonteirobonifacio/projeto2-engenharia-dados-satc
 
 theme:
   name: material
-  logo: Imagens/logo.png       
-  favicon: Imagens/favicon.png 
+  language: pt-BR
   palette:
-    primary: black
-    accent: white
-  language: pt
+    - scheme: default
+      primary: black
+      accent: blue
+    - scheme: slate
+      primary: black
+      accent: blue
   features:
-    - navigation.footer
     - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.path
+    - navigation.sections
     - navigation.top
-    - navigation.next-prev
-    - search
-  icon:
-    repo: fontawesome/brands/github
+    - content.code.copy
+    - search.highlight
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com
-  generator: false
+nav:
+  - Início: index.md
+  - Apache Spark: spark.md
+  - Delta Lake: delta.md
+  - MINio: dados.md
 
-copyright: Copyright &copy; 2026 - Bruno M, Gianluca A e Luis Filipe D - Todos os direitos reservados.
-
-# Ocultei extra_css e extra_javascript se você não os criou (para não dar erro 404). 
-# Se você tiver esses arquivos na pasta docs, pode descomentar abaixo:
-# extra_css:
-#   - stylesheets/extra.css
-# extra_javascript:
-#   - javascripts/extra.js
-
-plugins:
-  - search
-  - mkdocstrings:
-      default_handler: python
-
-markdown_extensions: 
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
+markdown_extensions:
   - admonition
-  - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.details
   - attr_list
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg

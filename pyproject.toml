@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "projeto2-engenharia-dados-satc"
 version = "0.1.0"
-description = "Projeto Apache Spark com Delta Lake, MinIO e SQL Server"
+description = "Projeto Apache Spark com Delta Lake, MinIO e PostgreSQL"
 readme = "README.md"
 authors = [
-    "Bruno Monteiro Bonifácio <brunombonifacio@gmail.com>", 
+    "Bruno Monteiro Bonifácio <brunombonifacio@gmail.com>",
+    "Gianluca Andrade <email@exemplo.com>",
     "Luis Filipe Damiani Colombo <luismiani2@gmail.com>"
 ]
 package-mode = false
@@ -16,7 +17,7 @@ delta-spark = "3.2.0"
 jupyterlab = ">=4.2.5"
 ipykernel = ">=6.29.0"
 pandas = ">=2.2.0"
-pyodbc = ">=5.1.0"
+psycopg2-binary = ">=2.9.9"
 pyspark = "3.5.3"
 python-dotenv = ">=1.0.0"
 

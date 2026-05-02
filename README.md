@@ -1,98 +1,81 @@
-# Projeto Apache Spark + Delta Lake + MinIO + SQL Server
+# Projeto Apache Spark + Delta Lake + MinIO + PostgreSQL
 
-Projeto desenvolvido para o curso de Engenharia de Dados com Spark e Delta Lake, lendo os dados de um databases SQL Server e carregando no MinIO.
+Projeto desenvolvido para a disciplina de Engenharia de Dados, focado na construção de um pipeline de dados utilizando Apache Spark e Delta Lake, realizando a extração de um banco relacional PostgreSQL e o armazenamento em MinIO (Object Storage).
 
-1. **Extração** de tabelas de um banco SQL Server 2025
-2. **Carga** no MinIO (Object Storage compatível com S3) no formato CSV
-3. **Conversão** para formato Delta Lake
-4. **Manipulação** dos dados com comandos DML (INSERT, UPDATE, DELETE)
+Extração de tabelas de um banco relacional PostgreSQL.
+
+Carga no MinIO (S3 compatível) no formato CSV (Landing Zone).
+
+Conversão dos dados brutos para o formato Delta Lake (Bronze Layer).
+
+Manipulação de dados utilizando comandos DML (INSERT, UPDATE, DELETE) com suporte a transações ACID.
 
 ## Arquitetura
-
-```
 ┌─────────────────┐     ┌──────────────────┐     ┌───────────────────┐
-│   SQL Server    │────▶│   MinIO (S3)     │────▶│   MinIO (S3)      │
-│   2025 Dev      │     │   landing-zone/  │     │   bronze/         │
+│   PostgreSQL    │────▶│   MinIO (S3)     │────▶│   MinIO (S3)      │
+│    Database     │     │   landing-zone/  │     │   bronze/         │
 │                 │     │   (CSVs)         │     │   (Delta Tables)  │
-│   SeguroDB      │     │                  │     │                   │
-│   11 tabelas    │     │   1 CSV/tabela   │     │   INSERT/UPDATE   │
+│    SeguroDB     │     │                  │     │                   │
+│    7 tabelas    │     │   1 CSV/tabela   │     │   INSERT/UPDATE   │
 │                 │     │                  │     │   DELETE/HISTORY  │
 └─────────────────┘     └──────────────────┘     └───────────────────┘
-     Notebook 00             Notebook 01            Notebooks 02/03
-     (Setup)                 (Extração)             (Delta + DML)
-```
+Notebook 00             Notebook 01            Notebooks 02/03
+(Setup)                 (Extração)             (Delta + DML)
 
 ## Pré-requisitos
+Linux (Ubuntu 24.04 ou WSL2 no Windows 11)
 
-- **Linux** (Ubuntu 24.04 ou WSL do Windows 11)
-- **Docker** e **Docker Compose** v2+
-- **Python 3.11** (PySpark 3.5.3 requer Python ≤ 3.12)
-- **Java 11** (OpenJDK)
-- **UV** (gerenciador de pacotes Python) — [instalação](https://github.com/astral-sh/uv)
-- **ODBC Driver 18 for SQL Server** — [instalação](https://learn.microsoft.com/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)
+Docker e Docker Compose v2+
 
-## Setup do Ambiente
+Python 3.11
 
-### 1. Subir os Containers (SQL Server + MinIO)
+Java 11 (OpenJDK)
 
-```bash
-docker compose up -d
-```
+UV (Gerenciador de pacotes e ambientes Python)
 
-**Containers criados:**
+## Setup do Ambiente1. 
 
-| Container       | Imagem                                      | Portas          |
-|----------------|---------------------------------------------|-----------------|
-| sqlserver-2025 | `mcr.microsoft.com/mssql/server:2025-latest` | `1433`          |
-| minio          | `minio/minio:RELEASE.2025-02-03T21-03-04Z`  | `9020`, `9021`  |
+Subir os Containers (PostgreSQL + MinIO)Bash
+´´´
+sudo docker compose up -d
+´´´
 
-**Credenciais:**
+### Containers criados:
 
-| Serviço     | Usuário       | Senha              |
-|-------------|---------------|---------------------|
-| SQL Server  | `sa`          | `SqlServer@2025!`  |
-| MinIO       | `minioadmin`  | `minioadmin`       |
+Container, Imagem, Portas
 
-**Console MinIO:** http://localhost:9021
+projeto2-eng-dados-postgres, postgres:14.22-trixie, 5432
+projeto2-eng-dados-minio, minio/minio:RELEASE.2025-02-03T21-03-04Z, "9020, 9021"
 
-### 2. Configurar Variáveis de Ambiente
+### Credenciais:
 
-Crie o arquivo de configuração a partir do template fornecido:
+Serviço, Usuário, Senha
 
-```bash
-cp .env.example .env
-```
+PostgreSQL, postgres, mysecretpassword
+MinIO, minioadmin, minioadmin
 
-### 3. Configurar o Ambiente Python
+Console MinIO: http://localhost:9021
 
-```bash
+Configurar o Ambiente Python
+
+Utilizamos o UV para garantir um ambiente rápido e isolado:
+´´´
+# Cria o ambiente virtual
 uv venv
+
+# Ativa o ambiente
 source .venv/bin/activate
+
+# Instala as dependências (Spark, Delta, etc)
 uv sync
-```
 
-### 4. Instalar ODBC Driver - Client SQL Server (Ubuntu)
-
-```bash
-# Ubuntu 24.04
-sudo apt install -y unixodbc-dev
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-sudo curl https://packages.microsoft.com/config/ubuntu/24.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
-sudo apt update
-sudo ACCEPT_EULA=Y apt install -y msodbcsql18
-```
-### 4.1. Validar instalação do ODBC Driver - Client SQL Server (Ubuntu)
-
-```bash
-# Ubuntu 24.04
-odbcinst -q -d
-```
-
-Deve retornar `[ODBC Driver 18 for SQL Server]`.
-
+# Instala as dependências (Spark, Delta, etc)
+uv sync
+´´´
 ## Executando o Projeto
 
-Execute os notebooks **em ordem**:
+Execute os notebooks presentes na pasta notebook/ seguindo a ordem lógica do pipeline:
+
 
 | # | Notebook | Descrição |
 |---|----------|-----------|
@@ -105,54 +88,51 @@ Execute os notebooks **em ordem**:
 
 ## Estrutura do Projeto
 
-```
-spark-delta-minio-sqlserver/
-├── docker-compose.yml                   # SQL Server 2025 + MinIO
-├── .env.example                         # Template de variáveis de ambiente
-├── pyproject.toml                       # Dependências Python (UV)
-├── .python-version                      # Python 3.11
-├── data/                                # CSVs de dados de exemplo
-│   ├── regiao.csv
+projeto2-engenharia-dados-satc/
+├── docker-compose.yml           # Infraestrutura (Postgres + MinIO)
+├── pyproject.toml               # Configuração de dependências (UV)
+├── .env                         # Variáveis de ambiente (credenciais)
+├── data/                        # Dados brutos para o setup inicial
+│   ├── anexo.csv
+│   ├── cidade.csv
 │   ├── estado.csv
-│   ├── municipio.csv
-│   ├── marca.csv
-│   ├── modelo.csv
-│   ├── cliente.csv
-│   ├── endereco.csv
-│   ├── telefone.csv
-│   ├── carro.csv
-│   ├── apolice.csv
-│   └── sinistro.csv
-├── notebook/                            # Notebooks Jupyter
-│   ├── 00_setup_sqlserver.ipynb         # Setup: CSV → SQL Server
-│   ├── 01_sqlserver_to_minio_csv.ipynb  # Extração: SQL Server → MinIO (CSV)
-│   ├── 02_csv_to_delta.ipynb            # Conversão: CSV → Delta Lake
-│   └── 03_dml_delta.ipynb               # DML: INSERT, UPDATE, DELETE
-└── README.md
-```
+│   ├── ouvidoria.csv
+│   ├── servico_afetado.csv
+│   ├── tipo_ouvidoria.csv
+│   └── usuario.csv
+├── notebook/                    # Processamento Spark e Delta Lake
+│   ├── 00_setup_postgres.ipynb
+│   ├── 01_postgres_to_minio_csv.ipynb
+│   ├── 02_csv_to_delta.ipynb
+│   └── 03_dml_delta.ipynb
+└── README.md                    # Documentação principal
 
 ## Tecnologias Utilizadas
 
 - **Apache Spark 3.5.3** (PySpark) — Motor de processamento distribuído
 - **Delta Lake 3.2.0** — Formato de armazenamento com suporte ACID
 - **MinIO** — Object Storage compatível com S3
-- **SQL Server 2025** — Banco de dados relacional (Developer Edition)
+- **PostgreSQL** — Banco de dados relacional 
 - **Docker Compose** — Orquestração de containers
 - **Python 3.11** com UV
 
 ## Conceitos Demonstrados
 
-- **Extração de dados** de banco relacional (SQL Server)
-- **Object Storage** como repositório de dados (MinIO/S3)
-- **Delta Lake** como formato de armazenamento lakehouse
-- **Transações ACID** em data lakes
-- **DML** (INSERT, UPDATE, DELETE) em tabelas Delta
-- **Versionamento** de dados (History e Time Travel)
-- **Arquitetura Medalhão** (Landing Zone → Bronze)
+- **Ingestão de Dados**: Carga de arquivos flat para banco relacional.
+
+- **Extração via JDBC**: Spark conectando e lendo dados de um banco de dados.
+
+- **Object Storage**: Armazenamento distribuído seguindo padrões de nuvem.
+
+- **Lakehouse**: Implementação de tabelas Delta com suporte a transações ACID.
+
+- **Arquitetura Medalhão**: Organização dos dados em camadas (Landing Zone e Bronze).
+
+- **Governança**: Auditoria de dados via DESCRIBE HISTORY.
 
 ## Links e Referências
 
 - [Delta Lake - Releases](https://docs.delta.io/latest/releases.html)
 - [Delta Spark - Maven Repository](https://mvnrepository.com/artifact/io.delta/delta-spark)
 - [MinIO - Documentação](https://min.io/docs/minio/linux/index.html)
-- [SQL Server 2025 - Docker](https://learn.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [PostgreSQL - Docker Hub](https://hub.docker.com/_/postgres)
