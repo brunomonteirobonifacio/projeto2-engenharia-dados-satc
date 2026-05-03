@@ -26,8 +26,10 @@ theme:
 nav:
   - Início: index.md
   - Apache Spark: spark.md
-  - Delta Lake: delta.md
-  - MINio: dados.md
+  - Delta Lake: dml_delta.md
+  - Delta CSV: csv_to_delta.md
+  - Minio CSV PostgreSQL: postgresql_to_minio_csv.md
+  - Setup PostgreSQL: setup_potsgresql.md
 
 markdown_extensions:
   - admonition
