@@ -39,7 +39,7 @@ Poetry (Gerenciador de pacotes e ambientes Python)
 
 Subir os Containers (PostgreSQL + MinIO)Bash
 ```
-sudo docker compose up -d
+docker compose up -d
 ```
 
 ### Containers criados:
