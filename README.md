@@ -111,7 +111,7 @@ projeto2-engenharia-dados-satc/
 - **MinIO** — Object Storage compatível com S3
 - **PostgreSQL** — Banco de dados relacional 
 - **Docker Compose** — Orquestração de containers
-- **Python 3.11** com UV
+- **Python 3.11** com Poetry
 
 ## Conceitos Demonstrados
 
