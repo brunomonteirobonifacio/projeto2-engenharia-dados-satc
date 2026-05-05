@@ -74,8 +74,8 @@ Execute os notebooks presentes na pasta notebook/ seguindo a ordem lógica do pi
 
 | # | Notebook | Descrição |
 |---|----------|-----------|
-| 0 | `00_setup_sqlserver.ipynb` | Cria database `SeguroDB` e carrega 11 tabelas com dados de exemplo |
-| 1 | `01_sqlserver_to_minio_csv.ipynb` | Extrai todas as tabelas do SQL Server → CSV no MinIO (bucket `landing-zone`) |
+| 0 | `00_setup_postgresql.ipynb` | Cria database `sistema_ouvidoria` e carrega 11 tabelas com dados de exemplo |
+| 1 | `01_sqlserver_to_minio_csv.ipynb` | Extrai todas as tabelas do PostgreSQL → CSV no MinIO (bucket `landing-zone`) |
 | 2 | `02_csv_to_delta.ipynb` | Lê CSVs do MinIO e converte para Delta Lake (bucket `bronze`) |
 | 3 | `03_dml_delta.ipynb` | Executa comandos DML (INSERT, UPDATE, DELETE), exibe HISTORY e TIME TRAVEL |
 
