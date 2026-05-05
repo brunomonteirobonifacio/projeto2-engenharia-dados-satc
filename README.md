@@ -11,6 +11,7 @@ Conversão dos dados brutos para o formato Delta Lake (Bronze Layer).
 Manipulação de dados utilizando comandos DML (INSERT, UPDATE, DELETE) com suporte a transações ACID.
 
 ## Arquitetura
+```
 ┌─────────────────┐     ┌──────────────────┐     ┌───────────────────┐
 │   PostgreSQL    │────▶│   MinIO (S3)     │────▶│   MinIO (S3)      │
 │    Database     │     │   landing-zone/  │     │   bronze/         │
@@ -21,6 +22,7 @@ Manipulação de dados utilizando comandos DML (INSERT, UPDATE, DELETE) com supo
 └─────────────────┘     └──────────────────┘     └───────────────────┘
 Notebook 00             Notebook 01            Notebooks 02/03
 (Setup)                 (Extração)             (Delta + DML)
+```
 
 ## Pré-requisitos
 Linux (Ubuntu 24.04 ou WSL2 no Windows 11)
@@ -36,9 +38,9 @@ UV (Gerenciador de pacotes e ambientes Python)
 ## Setup do Ambiente1. 
 
 Subir os Containers (PostgreSQL + MinIO)Bash
-´´´
+```
 sudo docker compose up -d
-´´´
+```
 
 ### Containers criados:
 
@@ -59,19 +61,27 @@ Console MinIO: http://localhost:9021
 Configurar o Ambiente Python
 
 Utilizamos o UV para garantir um ambiente rápido e isolado:
-´´´
+
 # Cria o ambiente virtual
+```
 uv venv
+```
 
 # Ativa o ambiente
+```
 source .venv/bin/activate
+```
 
 # Instala as dependências (Spark, Delta, etc)
+```
 uv sync
+```
 
 # Instala as dependências (Spark, Delta, etc)
+```
 uv sync
-´´´
+```
+
 ## Executando o Projeto
 
 Execute os notebooks presentes na pasta notebook/ seguindo a ordem lógica do pipeline:
@@ -88,6 +98,7 @@ Execute os notebooks presentes na pasta notebook/ seguindo a ordem lógica do pi
 
 ## Estrutura do Projeto
 
+```
 projeto2-engenharia-dados-satc/
 ├── docker-compose.yml           # Infraestrutura (Postgres + MinIO)
 ├── pyproject.toml               # Configuração de dependências (UV)
@@ -106,6 +117,7 @@ projeto2-engenharia-dados-satc/
 │   ├── 02_csv_to_delta.ipynb
 │   └── 03_dml_delta.ipynb
 └── README.md                    # Documentação principal
+```
 
 ## Tecnologias Utilizadas
 
