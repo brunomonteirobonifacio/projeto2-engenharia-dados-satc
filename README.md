@@ -33,7 +33,7 @@ Python 3.11
 
 Java 11 (OpenJDK)
 
-UV (Gerenciador de pacotes e ambientes Python)
+Poetry (Gerenciador de pacotes e ambientes Python)
 
 ## Setup do Ambiente1. 
 
@@ -62,24 +62,9 @@ Configurar o Ambiente Python
 
 Utilizamos o UV para garantir um ambiente rápido e isolado:
 
-# Cria o ambiente virtual
+# Instalar as dependências do projeto
 ```
-uv venv
-```
-
-# Ativa o ambiente
-```
-source .venv/bin/activate
-```
-
-# Instala as dependências (Spark, Delta, etc)
-```
-uv sync
-```
-
-# Instala as dependências (Spark, Delta, etc)
-```
-uv sync
+poetry install
 ```
 
 ## Executando o Projeto
