@@ -35,9 +35,9 @@ Java 11 (OpenJDK)
 
 Poetry (Gerenciador de pacotes e ambientes Python)
 
-## Setup do Ambiente1. 
+## Setup do Ambiente
 
-Subir os Containers (PostgreSQL + MinIO)Bash
+Subir os Containers (PostgreSQL + MinIO)
 ```
 docker compose up -d
 ```
