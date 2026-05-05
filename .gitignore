@@ -20,3 +20,5 @@ metastore_db/
 
 # UV
 uv.lock
+
+site
